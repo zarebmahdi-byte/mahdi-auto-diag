@@ -12,7 +12,8 @@ jobs:
         python-version: '3.10'
     - run: pip install pyinstaller
     - run: pyinstaller --onefile main.py
-    - uses: actions/upload-artifact@v3
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
       with:
         name: MahdiAutoDiag-EXE
         path: dist/main.exe
